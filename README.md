@@ -20,7 +20,7 @@ A simple script to quickly spot/grep in CSV files
 
 ### Installation
 
-`curl -L https://raw.github.com/jothirams/spot/master/csvspot.sh -o /bin/csvspot && chmod +x /bin/csvspot`
+`curl -L https://raw.github.com/jothirams/csvspot/master/csvspot.sh -o /bin/csvspot && chmod +x /bin/csvspot`
 
 ### License
 
