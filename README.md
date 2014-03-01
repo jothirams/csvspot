@@ -16,6 +16,10 @@ A simple script to quickly spot/grep in CSV files
 >          OPERATING SYSTEM, VERSION
 >          OSX, 10.9.1
 
+### Installation
+
+> curl -L https://raw.github.com/jothirams/spot/master/csvspot.sh -o ~/bin/csvspot && chmod +x ~/bin/csvspot
+
 ### License
 
 The MIT License (MIT)
