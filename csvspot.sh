@@ -2,6 +2,7 @@
 
 version="0.0.1"
 
+# Various colors
 color() {
 	case $1 in
 		purple )
@@ -18,17 +19,54 @@ color() {
 
 }
 
+# Usage of the function
+usage() {
+  cat <<EOF
+
+  Usage: csvspot [options] [term ...]
+
+  Options:
+    -V, --version           Output version
+    -C, --count             Number of instances of the matches
+    -h, --help              This message.
+EOF
+}
+
+# Default count value
+count=1
+
+while [[ "$1" =~ ^- ]]; do
+  case $1 in
+  	-V | --version )
+		echo $version
+		exit
+		;;
+   	-C | --count )
+	  shift; count=$1
+	  ;;
+    -h | --help )
+      usage
+      exit
+      ;;
+  esac
+  shift
+done
+
+# Search and print
 color purple
-
-# Colors
-
 echo -e '------------------------------------------------------------------------------------------------'
-if [ -z "$2" ]
-    then
-        count=1
-else
-    count=$2
-fi
-for i in `grep -l $1 *` ; do color cyan; echo "$i :"; color green; head -n1 $i; color reset ; grep -m$count $1 $i; echo; done
+for i in `grep -l $1 *` 
+do 
+	color cyan # File name color
+	echo "$i :"
+	color green # First row color
+	head -n1 $i
+	color reset # Reset color
+	grep -m$count $1 $i
+	echo # Empty line between files
+done
+
 color red; echo -en '------------------------------------------------------------------------------------------------'
 color reset
+
+

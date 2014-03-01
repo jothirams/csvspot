@@ -1,5 +1,5 @@
-csvspot
-=======
+##csvspot
+=========
 
 A simple script to quickly spot/grep in CSV files
 
@@ -11,14 +11,16 @@ A simple script to quickly spot/grep in CSV files
 
 ### Usage
 
-> # csvspot OSX
-> names.csv:
->          OPERATING SYSTEM, VERSION
->          OSX, 10.9.1
+```
+ # csvspot OSX
+ names.csv:
+          OPERATING SYSTEM, VERSION
+          OSX, 10.9.1
+```
 
 ### Installation
 
-> curl -L https://raw.github.com/jothirams/spot/master/csvspot.sh -o ~/bin/csvspot && chmod +x ~/bin/csvspot
+`curl -L https://raw.github.com/jothirams/spot/master/csvspot.sh -o ~/bin/csvspot && chmod +x ~/bin/csvspot`
 
 ### License
 
